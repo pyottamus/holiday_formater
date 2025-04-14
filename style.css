@@ -1,0 +1,31 @@
+.holiday_ol{
+  list-style-type: none;
+  padding: 0;
+}
+
+.holiday_date_ol{
+  list-style-type: none;
+ 
+}
+.holiday_event_ol{
+  list-style-type: none;
+}
+
+.holiday_event_div{
+  display: flex;
+}
+
+.holiday_event_event{
+  display: block;
+  flex: 1;
+  display: flex;
+}
+
+.holiday_event_event::after{
+  content: '';
+  background: repeating-linear-gradient(to right, currentColor, currentColor 1px, transparent 2px, transparent 4px);
+  height: 1px;
+  display: inline-block;
+  flex-grow: 1;
+  margin-top:1em;
+}
