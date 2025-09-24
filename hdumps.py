@@ -52,12 +52,12 @@ class Writer:
     DATA_BEGIN = ()
     DATA_END   = ()
     HOLIDAY_BEGIN = '<ol class="holiday_ol">', IncTAB
-    HOLIDAY_FMT   = """<span class="holiday_title">""", IncTAB, "<li>", IncTAB, FmtLine("<h2>{}</h2>"), DecTAB, "</li>", DecTAB, "</span>", IncTAB, '<ol class="holiday_date_ol">'
+    HOLIDAY_FMT   = """<span class="holiday_title">""", IncTAB, "<li>", IncTAB, FmtLine("<h2>{}</h2>"), DecTAB, "</li>", DecTAB, "</span>", '<ol class="holiday_date_ol">', IncTAB
 
     DATE_BEGIN = ()
     DATE_END   = DecTAB, '</ol>'
 
-    DATE_FMT      = '<li class="holiday_date>"', IncTAB, FmtLine("<h3>{}</h3>"), DecTAB, '</li>', IncTAB, '<ol class="holiday_event_ol">', IncTAB
+    DATE_FMT      = '<li class="holiday_date">', IncTAB, FmtLine("<h3>{}</h3>"), DecTAB, '</li>', '<ol class="holiday_event_ol">', IncTAB
 
     EVENT_BEGIN = ()
     EVENT_END   = ()
@@ -68,7 +68,7 @@ class Writer:
     NOTE_END   = ()
     NOTE_FMT   = '<li class="holiday_event_note">', IncTAB, FmtLine('<span colspan="2">{}</span>'), DecTAB, '</li>'
 
-    HOLIDAY_END   = '</ol>', DecTAB, "</ol>", DecTAB, "</ol>"
+    HOLIDAY_END   = DecTAB, '</ol>', DecTAB, "</ol>"
 
     out_name: Path | io.TextIOBase
     header: Path | None
